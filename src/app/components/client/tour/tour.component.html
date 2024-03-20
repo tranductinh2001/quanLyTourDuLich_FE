@@ -1,0 +1,87 @@
+
+
+<!-- Package Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title bg-white text-center text-primary px-3">
+        gói tour
+      </h6>
+      <h1 class="mb-5">Tất cả các gói tour</h1>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div
+        class="col-lg-4 col-md-6 wow fadeInUp"
+        data-wow-delay="0.1s"
+        *ngFor="
+          let item of listTour | paginate : { itemsPerPage: 9, currentPage: p }
+        "
+      >
+        <div *ngIf="item && item.name">
+          <div class="package-item">
+            <div class="overflow-hidden">
+              <img class="img-fluid" [src]="'data:image/' + item.images[0]?.type+ ';base64,' + item.images[0]?.data">
+            </div>
+            <div class="d-flex border-bottom">
+              <small class="flex-fill text-center border-end py-2"
+                ><i class="fa fa-map-marker-alt text-primary me-2"></i
+                >{{ item.name }}</small
+              >
+              <small class="flex-fill text-center border-end py-2"
+                ><i class="fa fa-calendar-alt text-primary me-2"></i>Ngày bắt
+                đầu: {{ item.startDate | date : "dd/MM/yyyy" }}<br />
+                Ngày kết thúc: {{ item.endDate | date : "dd/MM/yyyy" }}
+              </small>
+              <small class="flex-fill text-center py-2"
+                ><i class="fa fa-user text-primary me-2"></i
+                >{{ item.participantsCount }}</small
+              >
+            </div>
+            <a style="font-size: 20px;">mã tour: {{ item.id }}</a>
+            <div class="text-center p-4">
+              <h3 class="mb-0">{{ item.price | currency }}</h3>
+              <div class="mb-3">
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+                <small class="fa fa-star text-primary"></small>
+              </div>
+              <p>{{ item?.name }}</p>
+              <div class="d-flex justify-content-center mb-2">
+                <a
+                  routerLink="/tourdetail/{{ item.id }}"
+                  class="btn btn-sm btn-primary px-3 border-end"
+                  style="border-radius: 30px 0 0 30px"
+                  >Read More</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-sm btn-primary px-3"
+                  style="border-radius: 0 30px 30px 0"
+                  >Book Now</a
+                >
+              </div>
+              <ul class="featured__item__pic__hover">
+                <li>
+                  <a href="javascript:void(0)" (click)="addToWishList(item)"
+                    >yêu thích <fa-icon [icon]="heart"></fa-icon
+                  ></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" (click)="addToCart(item)"
+                    >thêm vô giỏ hàng <fa-icon [icon]="bag"></fa-icon
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+  <!-- Package End -->
+
+</div>

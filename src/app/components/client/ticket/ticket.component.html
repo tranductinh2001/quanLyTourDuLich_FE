@@ -1,0 +1,57 @@
+<h1>vé lưu hành của bạn</h1>
+<div class="table-container">
+    <div class="form-group">
+        <label for="search-text"> Tìm kiếm theo từ khóa </label>
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="nhập từ khóa" 
+          autofocus>
+      </div>
+  <div class="table-responsive">
+    <table class="table custom-table m-0">
+      <thead>
+        <tr>
+          <th>id </th>
+          <th>Tên vé</th>
+          <th>số người có thể đi trong vé này</th>
+          <th>ngày bắt đầu</th>
+          <th>ngày kết thúc</th>
+          <th>mô tả</th>
+          <th>trạng thái</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>&nbsp;</td>
+          <td>
+            74%<br /><small>of Total:<br />80.00% (10)</small>
+          </td>
+          <td>
+            57%<br /><small>Avg for View:<br />90.00% (-16.67%)</small>
+          </td>
+          <td>
+            32%<br /><small>Avg for View:<br />50.00% (70.00%)</small>
+          </td>
+          <td>&nbsp;</td>
+        </tr> -->
+        <tr
+          *ngFor="
+            let Review of ListTicket | searchFilter: searchText
+              | paginate : { itemsPerPage: 9, currentPage: p };
+          "
+        >
+          <td>{{ Review.id }}</td>
+          <td>{{ Review.name }}</td>
+          <td>{{ Review.participantsCount }}</td>
+          <td>{{ Review.startDate }}</td>
+          <td>{{ Review.endDate }}</td>
+          <td>{{ Review.description }}</td>
+          <td>{{ Review.status }}</td>
+          <td >
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+
+
+

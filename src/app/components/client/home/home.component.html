@@ -1,0 +1,345 @@
+
+
+<!-- About Start -->
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="assets/img/about.jpg" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">Về Chúng Tôi</h6>
+                <h1 class="mb-4">chào mừng đến với <span class="text-primary">K43 travel</span></h1>
+                <p class="mb-4">Chúng tôi cam kết mang đến những trải nghiệm du lịch đáng nhớ nhất, kết nối với văn hóa địa phương và tôn trọng môi trường. Mỗi hành trình của chúng tôi được thiết kế để làm bùng nổ cảm xúc và kỷ niệm.</p>
+                <p class="mb-4">Đội ngũ chúng tôi là những người đam mê du lịch, sẵn sàng cung cấp sự phục vụ tận tâm và kiến thức sâu rộng về các điểm đến. Chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của khách hàng.</p>
+                <h1 class="mb-4">cam kết</h1>
+                <p class="mb-4"> 
+                    Chúng tôi không chỉ mang đến trải nghiệm du lịch tuyệt vời mà còn chú trọng đến sự bền vững và tôn trọng văn hóa địa phương.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                    </div>
+                </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" routerLink="/payment/aa">đọc thêm</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- About End -->
+
+<!-- Destination Start -->
+<div class="container-xxl py-5 destination">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-primary px-3">
+          Địa điểm
+        </h6>
+        <h1 class="mb-5">Điểm đến phổ biến</h1>
+      </div>
+      <div class="row g-3">
+        <div class="col-lg-7 col-md-6">
+          <div class="row g-3">
+            <div
+              class="col-lg-12 col-md-12 wow zoomIn"
+              data-wow-delay="0.1s"
+              *ngIf="listDestinationshot && listDestinationshot.length > 0"
+            >
+              <a
+                class="position-relative d-block overflow-hidden"
+                routerLink="/tour/destinations/{{ listDestinationshot[0].id }}"
+              >
+  
+                <img class="img-fluid" [src]="'data:image/' + listDestinationshot[0]?.image[0]?.type+ ';base64,' + listDestinationshot[0]?.image[0]?.data">
+                <div
+                  class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
+                >
+                  30% OFF
+                </div>
+                <div
+                  class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
+                >
+                  {{ listDestinationshot[0].name }}
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-lg-6 col-md-12 wow zoomIn"
+              data-wow-delay="0.3s"
+              *ngIf="listDestinationshot && listDestinationshot.length > 0"
+            >
+              <a
+                class="position-relative d-block overflow-hidden"
+                routerLink="/tour/destinations/{{ listDestinationshot[1].id }}"
+              >
+              <img class="img-fluid" [src]="'data:image/' + listDestinationshot[1]?.image[0]?.type+ ';base64,' + listDestinationshot[1]?.image[0]?.data">
+                
+                <div
+                  class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
+                >
+                  25% OFF
+                </div>
+                <div
+                  class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
+                >
+                  {{ listDestinationshot[1].name }}
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-lg-6 col-md-12 wow zoomIn"
+              data-wow-delay="0.5s"
+              *ngIf="listDestinationshot && listDestinationshot.length > 0"
+            >
+              <a
+                class="position-relative d-block overflow-hidden"
+                routerLink="/tour/destinations/{{ listDestinationshot[2].id }}"
+              >
+              <img class="img-fluid" [src]="'data:image/' + listDestinationshot[2]?.image[0]?.type+ ';base64,' + listDestinationshot[2]?.image[0]?.data">
+                <div
+                  class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
+                >
+                  35% OFF
+                </div>
+                <div
+                  class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
+                >
+                  {{ listDestinationshot[2].name }}
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-5 col-md-6 wow zoomIn"
+          data-wow-delay="0.7s"
+          style="min-height: 350px"
+          *ngIf="listDestinationshot && listDestinationshot.length > 0"
+        >
+          <a
+            class="position-relative d-block h-100 overflow-hidden"
+            routerLink="/tour/destinations/{{ listDestinationshot[3].id }}"
+          >
+          <img class="img-fluid" [src]="'data:image/' + listDestinationshot[3]?.image[0]?.type+ ';base64,' + listDestinationshot[3]?.image[0]?.data">
+            <div
+              class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
+            >
+              20% OFF
+            </div>
+            <div
+              class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
+            >
+              {{ listDestinationshot[3].name }}
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Destination Start -->
+
+
+
+
+<!-- Package Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">danh sách tour</h6>
+            <h1 class="mb-5">gói tour yêu thích</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div
+              class="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+              *ngFor="
+                let item of listTour | paginate : { itemsPerPage: 3, currentPage: p }
+              "
+            >
+              <div *ngIf="item && item.name">
+                <div class="package-item">
+                  <div class="overflow-hidden">
+                    <img class="img-fluid" [src]="'data:image/' + item.images[0]?.type+ ';base64,' + item.images[0]?.data">
+                  </div>
+                  <div class="d-flex border-bottom">
+                    <small class="flex-fill text-center border-end py-2"
+                      ><i class="fa fa-map-marker-alt text-primary me-2"></i
+                      >{{ item.name }}</small
+                    >
+                    <small class="flex-fill text-center border-end py-2"
+                      ><i class="fa fa-calendar-alt text-primary me-2"></i>Ngày bắt
+                      đầu: {{ item.startDate | date : "dd/MM/yyyy" }}<br />
+                      Ngày kết thúc: {{ item.endDate | date : "dd/MM/yyyy" }}
+                    </small>
+                    <small class="flex-fill text-center py-2"
+                      ><i class="fa fa-user text-primary me-2"></i
+                      >{{ item.participantsCount }}</small
+                    >
+                  </div>
+                  <a style="font-size: 20px;">mã tour: {{ item.id }}</a>
+                  <div class="text-center p-4">
+                    <h3 class="mb-0">{{ item.price | currency }}</h3>
+                    <div class="mb-3">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                    <p>{{ item.name }}</p>
+                    <div class="d-flex justify-content-center mb-2">
+                      <a
+                        routerLink="/tourdetail/{{ item.id }}"
+                        class="btn btn-sm btn-primary px-3 border-end"
+                        style="border-radius: 30px 0 0 30px"
+                        >Read More</a
+                      >
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-primary px-3"
+                        style="border-radius: 0 30px 30px 0"
+                        >Book Now</a
+                      >
+                    </div>
+                    <ul class="featured__item__pic__hover">
+                      <li>
+                        <a href="javascript:void(0)" (click)="addToWishList(item)"
+                          >yêu thích <fa-icon [icon]="heart"></fa-icon
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" (click)="addToCart(item)"
+                          >thêm vô giỏ hàng <fa-icon [icon]="bag"></fa-icon
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+    </div>
+</div>
+<!-- Package End -->
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
+            <h1 class="mb-5">Dịch vụ của chúng tôi</h1>
+        </div>
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" *ngFor="let item of listService | paginate: {itemsPerPage:4, currentPage: p}" >
+                <div class="service-item rounded pt-3" >
+                    <div class="p-4" routerLink="/service/{{item.id}}">
+                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                        <h5>Tên dịch vụ: {{item.name}}</h5>
+                        <p>Mô tả: {{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <pagination-controls (pageChange) ="p =  $event" ></pagination-controls>
+
+
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">hướng dẫn viên du lịch</h6>
+            <h1 class="mb-5">gặp các hướng dẫn viên của chúng tôi</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-1.jpg" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-2.jpg" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-3.jpg" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-4.jpg" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+

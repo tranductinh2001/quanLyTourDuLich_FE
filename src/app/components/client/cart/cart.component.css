@@ -1,0 +1,196 @@
+/* CSS cho breadcrumb */
+.breadcrumb-section {
+    background: #f4f4f4;
+    padding: 60px 0;
+  }
+  
+  .breadcrumb__text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .breadcrumb__option a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .breadcrumb__option a:hover {
+    color: #e7ab3c;
+  }
+  
+  /* CSS cho shopping cart table */
+  .shoping__cart__table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .shoping__cart__table th,
+  .shoping__cart__table td {
+    text-align: center;
+    padding: 15px 10px;
+  }
+  
+  .shoping__cart__table th {
+    background-color: #f4f4f4;
+  }
+  
+  .shoping__cart__table td img {
+    max-width: 100px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .shoping__cart__table td h5 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .shoping__cart__price,
+  .shoping__cart__quantity,
+  .shoping__cart__total {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* CSS cho buttons */
+  .primary-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e7ab3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-btn:hover {
+    background-color: #333;
+  }
+  
+  /* CSS cho discount codes và checkout */
+  .shoping__discount h5,
+  .shoping__checkout h5 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .shoping__discount input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .shoping__discount button.site-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .shoping__discount button.site-btn:hover {
+    background-color: #e7ab3c;
+  }
+  
+  /* CSS cho responsive */
+  @media (max-width: 767px) {
+    .shoping__cart__table th,
+    .shoping__cart__table td {
+      padding: 10px;
+    }
+    .breadcrumb__text h2 {
+      font-size: 28px;
+    }
+  }
+
+  
+  .inc.qtybtn {
+    font-size: 40px; /* Đổi kích thước chữ */
+    /* Hoặc có thể thử với thuộc tính width hoặc height */
+    /* width: 40px; */
+    /* height: 40px; */
+    position: relative;
+    left: 30px; /* Đẩy phần tử sang bên phải */
+}
+
+
+
+
+
+
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table header */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Table rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Table cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Tour image */
+.shopng__cart__item img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* Quantity buttons */
+.qtybtn {
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Service buttons */
+.service-button {
+  margin: 4px;
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.service-button:hover {
+  background-color: #2980b9;
+}
+
+/* Remove button */
+.p-button-rounded {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.p-button-rounded:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,96 @@
+/* Trong file CSS của bạn */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white; /* Màu chữ trắng */
+    background-color: #007bff; /* Màu nền xanh */
+    padding: 5px 5px 5px 5px; /* Khoảng cách nội dung */
+    border-radius: 20px; /* Bo tròn góc */
+    max-width:200px; /* Chiều rộng tối đa */
+    margin: 0; /* Canh giữa */
+    height: 100px;
+    border: 2px solid white; /* Viền màu trắng */
+  }
+  
+  .user-profile.ng-star-inserted {
+    height: 80px;
+}
+
+  .user-avatar {
+    width: 40px; /* Độ rộng của hình ảnh */
+    height: 40px; /* Chiều cao của hình ảnh */
+    border-radius: 50%; /* Bo tròn hình ảnh */
+    margin-bottom: 8px; /* Khoảng cách giữa hình ảnh và tên */
+  }
+  
+  .user-name {
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold;
+  }
+  
+  /* Trong file CSS của bạn */
+.dropdown-item {
+    color: #ccc; /* Màu chữ nhẹ */
+  }
+  
+  /* Để thêm màu chữ cho các icon */
+  .dropdown-item fa-icon {
+    color: #ccc; /* Màu chữ nhẹ cho icon */
+  }
+  
+
+
+  button.cart-button {
+    position: relative;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  button.cart-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+  }
+  
+  span.badge {
+    position: absolute;
+    top: 13px;
+    right: -8px;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: #ff6f61; /* Màu đỏ sáng */
+    color: #fff; /* Màu trắng */
+  }
+  
+
+  button.favorite-button {
+    position: relative;
+  }
+
+
+
+  .featured__item__pic__hover {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .featured__item__pic__hover li {
+    margin-left: 10px; /* Khoảng cách giữa các nút */
+  }
+  
+  .featured__item__pic__hover li::before {
+    display: none; /* Ẩn dấu chấm đầu tiên của mỗi thẻ li */
+  }
+  
+  
